@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac To</title>
+    <title>Tic-Tac-Toe (Lila vs Rot)</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <div class="game-container">
+        <h1>Tic-Tac-Toe</h1>
 
+        <div class="status-display">Spieler Lila ist dran!</div>
 
+        <div class="game-board">
+            <div class="cell" data-cell-index="0"></div>
+            <div class="cell" data-cell-index="1"></div>
+            <div class="cell" data-cell-index="2"></div>
+            <div class="cell" data-cell-index="3"></div>
+            <div class="cell" data-cell-index="4"></div>
+            <div class="cell" data-cell-index="5"></div>
+            <div class="cell" data-cell-index="6"></div>
+            <div class="cell" data-cell-index="7"></div>
+            <div class="cell" data-cell-index="8"></div>
+        </div>
+
+        <button class="game-restart">Spiel neu starten</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
