@@ -1,0 +1,120 @@
+:root {
+    --color-bg: #1a1a1a;
+    --color-text: #ffffff;
+    --color-grid: #333333;
+    --color-player-x: #9b59b6;
+    /* Lila */
+    --color-player-o: #e74c3c;
+    /* Rot */
+    --color-hover: #2a2a2a;
+    --color-button: #4a4a4a;
+    --color-button-hover: #5a5a5a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    background-color: #222;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.status-display {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: color 0.3s ease;
+}
+
+.status-display.x-turn {
+    color: var(--color-player-x);
+}
+
+.status-display.o-turn {
+    color: var(--color-player-o);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    background-color: var(--color-grid);
+    border: 5px solid var(--color-grid);
+    border-radius: 10px;
+}
+
+.cell {
+    background-color: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.cell:hover {
+    background-color: #3a3a3a;
+}
+
+.cell:active {
+    transform: scale(0.95);
+}
+
+.cell.x {
+    color: var(--color-player-x);
+    text-shadow: 0 0 10px rgba(155, 89, 182, 0.5);
+}
+
+.cell.o {
+    color: var(--color-player-o);
+    text-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+}
+
+.game-restart {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: var(--color-button);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+.game-restart:hover {
+    background-color: var(--color-button-hover);
+}
+
+.game-restart:active {
+    transform: scale(0.95);
+}
